@@ -1,6 +1,4 @@
-// line_0.c   cwc
-// 181225
-// g++ line_0.c -lglut -lGL -o line0
+// gcc plotNODB_800_0.c -lglut -lGL -o plotNODB_800_.o
 #include <stdio.h>
 #include "GL/glut.h"
 #include "GL/gl.h"
