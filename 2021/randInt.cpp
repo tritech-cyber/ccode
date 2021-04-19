@@ -15,9 +15,8 @@ int main()
    { 
 	   rint = (int)dist(PRNG);
 	   temp = (char)rint;
-	   sum = sum + temp;
 	   cout << rint<< " "<<temp<<" ";
-	  
+	   sum = sum + temp;
       if (i % 13 == 0) cout << '\n';
    }
    cout << '\n'<<sum<<'\n';
