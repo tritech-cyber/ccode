@@ -7,7 +7,7 @@ int main()
    default_random_engine PRNG(random_device {}());
    uniform_real_distribution<double> dist(97.0, 123.0);
 
-   const int nSimulations { 127 };
+   const int nSimulations { 3 };
 	int rint = 0;
 	string temp = "";
 	string sum = "";
