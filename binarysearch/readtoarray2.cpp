@@ -7,17 +7,18 @@ int main()
 {
     using namespace std;
 	int i;
-	array<string,26> wordlist;
+	const int  array_length = 9897;
+	array<string,array_length> wordlist;
 	//string wordlist[26];
-    ifstream file("words.txt");
-    if(file.is_open())
-    {   for(i = 0; i < 26; ++i)
+    ifstream filename("10000.txt");
+    if(filename.is_open())
+    {   for(i = 0; i < array_length; ++i)
         {
-            file >> wordlist[i];
+            filename >> wordlist[i];
         }
     }
     // print list of words
-    for(i = 0; i < 26;i++){
+    for(i = 0; i < array_length;i++){
 			cout<<wordlist[i]<<endl;
 	}
 
