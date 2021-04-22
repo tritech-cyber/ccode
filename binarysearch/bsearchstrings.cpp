@@ -45,6 +45,4 @@ int binary_search(array<string,13> blist, string search_string){
     }
     return -1;
 }
-`
 
-// https://gist.github.com/rcanepa/fc29c00c4185c4a13b54
