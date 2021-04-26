@@ -4,7 +4,7 @@ def main():
 	file = open("wordlist.txt")
 	array = file.read().split(',')
 	#print(array) #debugs
-	#print(len(array))
+	print(len(array))
 	
 	success = False
 	count = 1

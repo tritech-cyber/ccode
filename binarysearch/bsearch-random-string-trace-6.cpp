@@ -3,26 +3,30 @@
 #include <string>
 #include <random>
 using namespace std;
-const int alength = 14;
-int binary_search(array<string,alength> blist, string search_string);
+// global variable
+const int  array_length = 30;
+
+//int binary_search(array<string,26> blist, string search_string);
+int binary_search(array<string,array_length> blist, string search_string);
 
 int main(){
 	// Set up random double
 	default_random_engine PRNG(random_device {}());
-	uniform_real_distribution<double> dist(97.0, 123.0);
+	uniform_real_distribution<double> dist(97.0, 127.0);
 	int i,index;
 	int rint = 0,count = 1;
 	string temp = "";
-	string word = "";
-	array<string,alength> list {"aaaaa","bbb","ccc","ddd","eee","fff","ggg","hhh","iii","jjj","kkk","lll","mmm","zzzzz"};
-	// print list
-	//for (i = 0 ;i < = alength;i++)
-	//	cout<<list[i]<<" ";
-	//
+	string word = "\{";
+	//search this array
+	array<string, array_length> list {"abcdef","bcdefg","cdefgh","defghi","efghij","fghijk",
+									  "ghijkl","hijklm","ijklmn","jklmno","klmnop","lmnopq",
+									  "mnopqr","nopqrs","opqrst","pqrstu","qrstuv","rstuvw",
+							          "stuvwx","tuvwxy","uvwxyz","vwxyza","wxyzab","xyzabc",
+							          "zab","\{\{\{\{\{\{","\{\{\{","~~~~~","~~~~~","~~~~~"};
 	bool done = false;
 	while (!done){
 		// create a 5 letter word
-		for (i = 0; i < 5; i++){
+		for (i = 0; i < 6; i++){
 				rint = (int)dist(PRNG);temp = (char)rint;
 				word = word + temp;
 		}
@@ -36,7 +40,7 @@ int main(){
     return 0;
 }
 
-int binary_search(array<string,alength> blist, string search_string){
+int binary_search(array<string, array_length> blist, string search_string){
 	int n = blist.size();
     //cout<< "\nList_length "<<" n "<< n <<endl;
     int s = 0;//  start of list
@@ -44,7 +48,7 @@ int binary_search(array<string,alength> blist, string search_string){
     int m = (s + e) / 2; // middle
 	int count = 1;
     while (s <= e)
-    {     cout<<" s m e count "<<s<<" , "<<m<<" , "<< e << " - "<<count<<endl;
+    {     //cout<<" s m e count "<<s<<" , "<<m<<" , "<< e << " - "<<count<<endl;
 		
 		 if (blist[m] == search_string)
             return m;
