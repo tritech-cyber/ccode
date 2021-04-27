@@ -14,10 +14,10 @@ int main(){
 	array<string,26>nato;
 	cout<<"Array unsorted"<<endl;
 	printArray(natorev);
-	cout<<"\nSelection Sort"<<endl;
+	cout<<"\n\nSelection Sort"<<endl;
 	nato = selectSort(natorev);
 	printArray(nato);
-	cout<<"\nInsertion Sort"<<endl;
+	cout<<"\n\nInsertion Sort"<<endl;
 	nato = insertSort(natorev);
 	printArray(nato);
     return 0;
@@ -63,9 +63,9 @@ array<string,26> insertSort(array<string,26>list){
 				j--;
 				swap++;
 			}
-			cout << " loop i "<<i<<endl;
-			cin>>p;
-			printArray(list);
+			//cout << " loop i "<<i<<endl;
+			//cin>>p;
+			//printArray(list);
 	}
 	cout<<"swaps "<<swap<<endl;
 	return list;
