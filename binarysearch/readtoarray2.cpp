@@ -7,7 +7,7 @@ int main()
 {
     using namespace std;
 	int i;
-	const int  array_length = 9897;
+	const int  array_length = 9900;
 	array<string,array_length> wordlist;
 	//string wordlist[26];
     ifstream filename("10000.txt");

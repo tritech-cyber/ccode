@@ -30,9 +30,8 @@ int main(){
 	cout<<"Array unsorted"<<endl;
 	//printArray(wordlist);
 	cout<<"\n\nSelection Sort"<<endl;
-	cin>>p;
 	arraysorted = selectSort(wordlist);
-	printArray(arraysorted);
+	//printArray(arraysorted);
 	cout<<"\n\nInsertion Sort"<<endl;
 	arraysorted = insertSort(wordlist);
 	//printArray(arraysorted);
