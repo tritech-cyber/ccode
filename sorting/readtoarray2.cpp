@@ -2,23 +2,23 @@
 #include <string>
 #include <fstream>
 #include <array>
-
+const int  arraylength = 9897;
 int main()
 {
     using namespace std;
 	int i;
-	const int  array_length = 9897;
-	array<string,array_length> wordlist;
+	
+	array<string,arraylength> wordlist;
 	//string wordlist[26];
     ifstream filename("10000.txt");
     if(filename.is_open())
-    {   for(i = 0; i < array_length; ++i)
+    {   for(i = 0; i < arraylength; ++i)
         {
             filename >> wordlist[i];
         }
     }
     // print list of words
-    for(i = 0; i < array_length;i++){
+    for(i = 0; i < arraylength;i++){
 			cout<<wordlist[i]<<endl;
 	}
 
