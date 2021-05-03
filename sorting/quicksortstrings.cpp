@@ -52,9 +52,10 @@ array<string,arraylength>  quickSort(array<string,arraylength>list, int low, int
         quickSort(list, low, pi - 1);
         quickSort(list, pi + 1, high);
     }
+    return list;
 }
  
-/* Function to print an array */
+/* Function to print an array 
 void printArray(int arr[], int size)
 {
     int i;
@@ -62,16 +63,16 @@ void printArray(int arr[], int size)
         cout << arr[i] << " ";
     cout << endl;
 }
- 
+ */
 // Driver Code
 int main()
 {
-    array<string, array_length> thelist {"abcdef","bcdefg","cdefgh","defghi","efghij",
-									  "ghijkl","hijklm","ijklmn","jklmno","klmnop"};
+    array<string, arraylength> thelist {"abcdef","bcdefg","cdefgh","defghi","efghij",
+										"ghijkl","hijklm","ijklmn","jklmno","klmnop"};
 	int n = thelist.size();
     quickSort(thelist, 0, n - 1);
     cout << "Sorted array: \n";
-    printArray(arr, n);
+   // printArray(thelist, n);
     return 0;
 }
  
