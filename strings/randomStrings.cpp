@@ -5,19 +5,22 @@ int main()
 {
    // https://en.cppreference.com/w/cpp/numeric/random/random_device
    default_random_engine PRNG(random_device {}());
+   default_random_engine LENGTH(random_device {}());
    uniform_real_distribution<double> dist(97.0, 123.0);
+	uniform_real_distribution<double> word(1.0, 45.0);
 
-   const int nSimulations { 10 };
-	int rint = 0;
+	
+	int i, rint = 0, length = 0;
 	string temp = "";
 	string sum = "";
-	for (int i { 1 }; i <= nSimulations; i++)
+	length = (int)word(LENGTH);
+	for (i = 0; i <= length; i++)
    { 
 	   rint = (int)dist(PRNG);
 	   temp = (char)rint;
 	   //cout << rint<< " "<<temp<<" ";
 	   sum = sum + temp;
-      if (i % 13 == 0) cout << '\n';
+     //if (i % 13 == 0) cout << '\n';
    }
-   cout << '\n'<<sum<<'\n';
+   cout <<sum<<endl;
 }

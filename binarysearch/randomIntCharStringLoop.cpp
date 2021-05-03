@@ -17,7 +17,7 @@ int main()
 	   temp = (char)rint;
 	   //cout << rint<< " "<<temp<<" ";
 	   sum = sum + temp;
-      if (i % 13 == 0) cout << '\n';
+     //if (i % 13 == 0) cout << '\n';
    }
-   cout << '\n'<<sum<<'\n';
+   cout <<sum<<endl;
 }
