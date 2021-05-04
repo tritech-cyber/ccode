@@ -1,5 +1,3 @@
-/  CIS 235  Exercise 1  
-
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -14,7 +12,7 @@ void sortArray( string data[], int cellsUsed);
 
 
 
-void main()
+int main()
 {
 	const int CELLS = 5;
 	string  names[CELLS] = { "tom", "mary", "ann", "bill","carol"};
@@ -31,6 +29,7 @@ void main()
 
 	if (names[0][0] >  names[1][0])
 		cout << "YAY" << endl;
+	return 0;
 }   // end main
 
 
