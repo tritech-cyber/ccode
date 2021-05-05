@@ -8,7 +8,6 @@ using namespace std;
 //const int arraylength = 26;
 const int  arraylength = 200000;
 array<string,arraylength> selectSort(array<string,arraylength>list);
-array<string,arraylength> insertSort(array<string,arraylength>list);
 void printArray(array<string,arraylength>list);
 
 int main(){
@@ -69,34 +68,6 @@ array<string,arraylength> selectSort(array<string,arraylength>list){
         return list;
 }
 
-
-array<string,arraylength> insertSort(array<string,arraylength>list){
-	int i,j;
-	int p;
-	int noswap = 0;
-	int compare = 0;
-	string temp;
-	int n = list.size();//array length
-                
-	for (i = 0; i < n; i++){
-		j = i;
-		compare++;
-			while (j > 0 && list[j] < list[j-1]){
-				 if(list[j-1]>list[j])compare++;//compare . remove to speed up
-				temp = list[j];
-				list[j] = list[j-1];
-				list[j-1] = temp;
-				j--;
-				noswap++;
-			}
-			//cout << " loop i "<<i<<endl;
-			//cin>>p;
-			//printArray(list);
-	}
-	cout<<"compare "<<compare<<endl;
-	cout<<"no swap "<<noswap<<endl;
-	return list;
-}
 
 void printArray(array<string,arraylength>list){
 	for (int i = 0;i < arraylength ;i++){
