@@ -5,9 +5,8 @@
 using namespace std;
 int main()
 {
-	const int arraylength = 20000;
-	string  names[arraylength] = { "zzzz", "xxxxxx", "yyyyyy", "wwwwww", "ddddddd" };
-	
+	int i;
+	const int arraylength = 20000;	
 	string wordlist[arraylength];
 	ifstream filename("20000.txt");
     if(filename.is_open())
@@ -16,11 +15,11 @@ int main()
             filename >> wordlist[i];
         }
     }
-	cout<<names+arraylength<<endl;
+
 	sort(wordlist, wordlist + arraylength);
 
-	for (auto element : wordlist)
-		cout << element <<' ';
+	for (i = 0; i < arraylength;i++)
+		cout << wordlist[i] <<endl;
 
 	return 0;
 }
