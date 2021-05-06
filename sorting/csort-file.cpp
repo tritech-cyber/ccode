@@ -6,9 +6,9 @@ using namespace std;
 int main()
 {
 	int i;
-	const int arraylength = 20000;	
+	const int arraylength = 1000;	
 	string wordlist[arraylength];
-	ifstream filename("20000.txt");
+	ifstream filename("1000.txt");
     if(filename.is_open())
     {   for(int i = 0; i < arraylength; ++i)
         {
@@ -20,6 +20,8 @@ int main()
 
 	for (i = 0; i < arraylength;i++)
 		cout << wordlist[i] <<endl;
+
+	cout<<"\n\n c sort arrayLength "<<arraylength<<endl;
 
 	return 0;
 }

@@ -6,7 +6,7 @@
 
 using namespace std;
 //const int arraylength = 26;
-const int  arraylength = 200000;
+const int  arraylength = 1000;
 array<string,arraylength> selectSort(array<string,arraylength>list);
 void printArray(array<string,arraylength>list);
 
@@ -16,7 +16,7 @@ int main(){
 	int i;
 	string p;
 	array<string,arraylength> wordlist;
-    ifstream filename("20000.txt");
+    ifstream filename("1000.txt");
     if(filename.is_open())
     {   for(i = 0; i < arraylength; ++i)
         {
@@ -31,9 +31,8 @@ int main(){
 	cout<<"\n\nSelection Sort"<<endl;
 	arraysorted = selectSort(wordlist);
 	//printArray(arraysorted);
-	cout<<"\n\nInsertion Sort"<<endl;
-	arraysorted = insertSort(wordlist);
-	//printArray(arraysorted);
+	printArray(arraysorted);
+	cout<<"\n\n selection sort - arrayLength "<<arraylength<<endl;
     return 0;
 }
 
@@ -71,7 +70,7 @@ array<string,arraylength> selectSort(array<string,arraylength>list){
 
 void printArray(array<string,arraylength>list){
 	for (int i = 0;i < arraylength ;i++){
-		cout<<list[i]<<" ";
-		if(i % 13 == 0 && i != 0)cout<<endl;
+		cout<<list[i]<<endl;
+
 	}
 }
